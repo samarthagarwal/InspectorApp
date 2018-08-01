@@ -1,0 +1,22 @@
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title>Locations</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <ion-list>
+    <ion-list-header>Select a Location</ion-list-header>
+    <ion-item *ngFor="let location of locations">
+
+      <h2>{{ location.data().locationName }} </h2>
+      <p>{{ location.data().locationId }} </p>
+
+    </ion-item>
+  </ion-list>
+
+</ion-content>

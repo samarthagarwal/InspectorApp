@@ -1,5 +1,5 @@
 <ion-header>
-  <ion-navbar>
+  <ion-navbar color="primary">
     <ion-title>
       Ionic Blank
     </ion-title>
@@ -7,8 +7,24 @@
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+
+  <ion-list>
+      <ion-list-header>Select an Area</ion-list-header>
+    <ion-item *ngFor="let area of areas" (click)="gotoLocationPage(area)">
+      <h2>{{ area.data().areaName }}</h2>
+      <p>{{ area.data().areaId }}</p>
+    </ion-item>
+  </ion-list>
+
+  <!-- <ion-list>
+    <ion-item>
+      <ion-label stacked>Your Name</ion-label>
+      <ion-input type="text" [(ngModel)]="name"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label stacked>Your Email</ion-label>
+      <ion-input type="email" [(ngModel)]="email"></ion-input>
+    </ion-item>
+  </ion-list>
+  <button ion-button (click)="save()" block>Save</button> -->
 </ion-content>
