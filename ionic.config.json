@@ -1,0 +1,7 @@
+{
+  "name": "InspectionApp",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}
